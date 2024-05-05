@@ -38,13 +38,6 @@ class RegistrationPage:
         browser.element(f'.react-datepicker__day--0{day}:not(.react-datepicker__day--outside-month)').click()
         return self
 
-    # def fill_date_of_birth(self, year, month, day):
-    #     browser.element('#dateOfBirthInput').click()
-    #     browser.element('.react-datepicker__month-select').click().element(by.text(month)).click()
-    #     browser.element('.react-datepicker__year-select').click().element(by.text(year)).click()
-    #     browser.element(f'.react-datepicker__day--0{day}').click()
-    #     return self
-
     def fill_state(self, name):
         self.state.perform(command.js.scroll_into_view)
         self.state.click()
