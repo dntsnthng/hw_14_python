@@ -5,9 +5,8 @@ import allure
 
 @allure.tag('web')
 @allure.title('Successful fill form')
-def test_registers_user(setup_browser):
+def test_registers_user():
     registration_page = RegistrationPage()
-    browser = setup_browser
 
     with allure.step('Open registration page'):
         registration_page.open()

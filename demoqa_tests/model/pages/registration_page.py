@@ -5,6 +5,7 @@ from demoqa_tests.data.users import User
 
 
 class RegistrationPage:
+
     def __init__(self):
         self.first_name = browser.element('#firstName')
         self.last_name = browser.element('#lastName')
@@ -121,7 +122,3 @@ class RegistrationPage:
         self.fill_state(user.state)
         self.fill_city(user.city)
         self.submits()
-
-
-
-
