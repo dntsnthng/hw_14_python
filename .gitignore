@@ -1,10 +1,10 @@
 # User-specific stuff
 # ...
-
+.env
 # JetBrains
 .idea/
 *.iml
-
+.
 # MacOS
 .DS_Store
 
