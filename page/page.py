@@ -90,8 +90,8 @@ class Page:
         return self
 
     def check_data(self):
-        self.should_have_city()
-        self.should_have_company()
+        self.check_city()
+        self.check_company()
         return self
 
     '''
