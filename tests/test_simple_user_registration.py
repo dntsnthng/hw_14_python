@@ -12,14 +12,14 @@ import allure
 #     browser.all('[id^=google_ads][id$=container__]').perform(command.js.remove)
 #     return self
 
-@allure.step ('ВЫбираем город')
+@allure.step('ВЫбираем город')
 def test_fill_city_():
     browser.open('/')
     browser.element('.supernova-navi-item_area-switcher-button').click()
     browser.element('[href="https://saratov.hh.ru/?customDomain=1"]').click()
 
 
-@allure.step ('ВЫбираем компанию')
+@allure.step('ВЫбираем компанию')
 def test_search_company_():
     browser.open('/')
     browser.element('#a11y-search-input').type('Юmoney').press_enter()
@@ -28,7 +28,7 @@ def test_search_company_():
     browser.element('[href="/employer/655542"]').click()
 
 
-@allure.step ('Резюме')
+@allure.step('Резюме')
 def test_add_resume():
     browser.open('/')
     browser.element('#a11y-search-input').type('Специалист Яндекс').press_enter()
@@ -37,7 +37,7 @@ def test_add_resume():
     browser.element('[data-qa="serp-item__title"]').click()
 
 
-@allure.step ('Ищем работу')
+@allure.step('Ищем работу')
 def test_search_job():
     browser.open('/')
     browser.element('#a11y-search-input').type('Python').press_enter()
@@ -52,7 +52,7 @@ def test_search_job():
     time.sleep(3)
 
 
-@allure.step ('Тест на город')
+@allure.step('Тест на город')
 def test_should_have_city():
     browser.open('/')
     browser.element('.supernova-navi-item_area-switcher-button').click()
@@ -60,7 +60,7 @@ def test_should_have_city():
     browser.element('[data-qa="mainmenu_areaSwitcher"]').should(have.text('Саратов'))
 
 
-@allure.step ('Тест на компанию')
+@allure.step('Тест на компанию')
 def test_should_have_company():
     browser.open('/')
     browser.element('#a11y-search-input').type('Юmoney').press_enter()
