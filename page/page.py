@@ -4,17 +4,19 @@ from selene.support.shared import browser
 
 
 class Page:
-    def __init__(self):
-        pass
+
+    def open(self):
+        browser.open('https://hh.ru/?customDomain=1')
+        return self
 
     def fill_city(self):
-        browser.open('/')
+        #browser.open('/')
         browser.element('.supernova-navi-item_area-switcher-button').click()
         browser.element('[href="https://saratov.hh.ru/?customDomain=1"]').click()
         return self
 
     def search_company(self):
-        browser.open('/')
+        #browser.open('/')
         browser.element('#a11y-search-input').type('Юmoney').press_enter()
         browser.element('[data-qa="bloko-modal-close"]').click()
         browser.element('[data-hh-tab-id="employersList"]').click()
@@ -22,7 +24,7 @@ class Page:
         return self
 
     def search_resume(self):
-        browser.open('/')
+        #browser.open('/')
         browser.element('#a11y-search-input').type('Специалист Яндекс').press_enter()
         browser.element('[data-qa="bloko-modal-close"]').click()
         browser.element('[data-hh-tab-id="resumeSearch"]').click()
@@ -30,28 +32,26 @@ class Page:
         return self
 
     def search_job(self):
-        browser.open('/')
+        #browser.open('/')
         browser.element('#a11y-search-input').type('Python').press_enter()
         browser.element('[data-qa="bloko-modal-close"]').click()
         browser.element('[name=part_time][value=start_after_sixteen]+span').click()
         browser.execute_script('window.scrollTo(0, 1000)')
         time.sleep(3)
         browser.element('[name=salary][value="50000"]+span').click()
-        browser.execute_script('window.scrollTo(0, 4300)')
+        browser.execute_script('window.scrollTo(0, 4400)')
         browser.element('[class=bloko-checkbox__input][value="124"]+span').click()
         browser.element('[name=education][value="not_required_or_not_specified"]+span').click()
-        time.sleep(3)
         return self
 
     def should_have_city(self):
-        browser.open('/')
+        #browser.open('/')
         browser.element('.supernova-navi-item_area-switcher-button').click()
         browser.element('[href="https://saratov.hh.ru/?customDomain=1"]').click()
         browser.element('[data-qa="mainmenu_areaSwitcher"]').should(have.text('Саратов'))
-        return self
 
     def should_have_company(self):
-        browser.open('/')
+        #browser.open('/')
         browser.element('#a11y-search-input').type('Юmoney').press_enter()
         browser.element('[data-qa="bloko-modal-close"]').click()
         browser.element('[data-hh-tab-id="employersList"]').click()
@@ -78,7 +78,8 @@ class Page:
         self.should_have_city()
         return self
 
-    def check_company(self):
+    def check_com(self):
+        self.should_have_city()
         self.should_have_company()
         return self
 
@@ -87,11 +88,6 @@ class Page:
         self.add_job()
         self.add_resume()
         self.add_company()
-        return self
-
-    def check_data(self):
-        self.check_city()
-        self.check_company()
         return self
 
     '''

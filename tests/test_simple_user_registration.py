@@ -4,13 +4,43 @@ from page.page import Page
 
 @allure.tag('web')
 @allure.title('Successful search job')
-def test_one_hh():
+def test_search_city():
     p = Page()
-    with allure.step('Search job'):
-        p.add_resume()
+    p.open()
+    p.fill_city()
 
 
 def test_check():
     p = Page()
-    with allure.step('Checking user data'):
-        p.check_data()
+    p.open()
+    p.search_resume()
+
+
+def test_search():
+    p = Page()
+    p.open()
+    p.search_job()
+
+
+def test_search_resume():
+    p = Page()
+    p.open()
+    p.search_resume()
+
+
+def test_search_company():
+    p = Page()
+    p.open()
+    p.search_company()
+
+
+def test_check_resume():
+    p = Page()
+    p.open()
+    p.search_resume()
+
+
+def test_check_city():
+    p = Page()
+    p.open()
+    p.fill_city()
