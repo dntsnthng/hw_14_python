@@ -10,13 +10,7 @@ def test_search_city():
     p.fill_city()
 
 
-def test_check():
-    p = Page()
-    p.open()
-    p.search_resume()
-
-
-def test_search():
+def test_search_job():
     p = Page()
     p.open()
     p.search_job()
