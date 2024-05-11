@@ -20,8 +20,8 @@
 - Проверка выполненых задач
 ## Используемый стэк
 
-![img.png](img/python.png)
-![img_4.png](img/img_4.png)
+![img_2.png](img_2.png)
+![img_1.png](img_1.png)
 ![img.png](img/img.png)
 ![img_2.png](img/img_22.png)
 ![img_3.png](img/img_3.png)
