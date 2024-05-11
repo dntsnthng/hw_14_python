@@ -33,7 +33,7 @@ class Page:
         browser.element('[data-qa="bloko-modal-close"]').click()
         browser.element('[name=part_time][value=start_after_sixteen]+span').click()
         browser.execute_script('window.scrollTo(0, 1000)')
-        time.sleep(3)
+        time.sleep(4)
         browser.element('[name=salary][value="50000"]+span').click()
         browser.execute_script('window.scrollTo(0, 4400)')
         browser.element('[class=bloko-checkbox__input][value="124"]+span').click()

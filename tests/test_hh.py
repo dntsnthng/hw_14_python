@@ -3,7 +3,7 @@ from page.page import Page
 
 
 @allure.tag('web')
-@allure.title('Successful search job')
+@allure.title('Select city')
 def test_search_city():
     p = Page()
     p.open()
