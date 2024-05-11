@@ -58,6 +58,7 @@
 ![img.png](img/allure2.png)
 
 <h2 id="telegram-notification">Оповещения в Telegram <img width="40" align="center" src="img/tt.png" alt="exapmle"></h2>
+
 ![img.png](img/ig.png)
 
 ## [Видео прохождения автотестов](https://selenoid.autotests.cloud/video/93ce3d0fe17922d2d1efc4071cda460d.mp4) ![img_3.png](img/img_3.png)
