@@ -34,7 +34,7 @@ class Page:
         browser.element('[name=part_time][value=start_after_sixteen]+span').click()
         browser.execute_script('window.scrollTo(0, 1000)')
         time.sleep(4)
-        browser.element('[name=salary][value="50000"]+span').click()
+        browser.element('[name=salary][value="55000"]+span').click()
         browser.execute_script('window.scrollTo(0, 4400)')
         browser.element('[class=bloko-checkbox__input][value="124"]+span').click()
         browser.element('[name=education][value="not_required_or_not_specified"]+span').click()
