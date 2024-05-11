@@ -20,12 +20,12 @@
 - Проверка выполненых задач
 ## Используемый стэк
 
-![img_2.png](img_2.png)
-![img_1.png](img_1.png)
+![img_2.png](img/img_2.png)
+![img_1.png](img/img_1.png)
 ![img.png](img/img.png)
 ![img_2.png](img/img_22.png)
-![img_3.png](img/img_3.png)
-![img_1.png](img/img_1.png)
+![img_3.png](img/img_353.png)
+![img_1.png](img/img_111.png)
 
 ## Запуск тестов из терминала
 ### Для запуска всех автотестов выполнить в cli:
@@ -43,24 +43,24 @@
 
 
 ### Запуск автотестов в Jenkins:
-1. Открыть проект в [Jekins](https://jenkins.autotests.cloud/job/hw_14_python_/)
+1. Открыть [проект](https://jenkins.autotests.cloud/job/hw_14_python_/)
 
 
 2. Нажать кпопку ![img_1.png](img/bn.png)
 
 
-## [Allure отчет](https://jenkins.autotests.cloud/job/hw_14_python_/13/allure/)
+## [Allure отчет](https://jenkins.autotests.cloud/job/hw_14_python_/13/allure/)![img_5.png](img/img_5.png)
 
 ![img.png](img/allure.png)
 
 
-### [Результат прохождения теста](https://jenkins.autotests.cloud/job/hw_14_python_/13/allure/#suites)
+### [Результат прохождения теста](https://jenkins.autotests.cloud/job/hw_14_python_/13/allure/#suites)![img_4.png](img/img_4.png)
 ![img.png](img/allure2.png)
 
-## [Оповещения в Telegram](https://ru.wikipedia.org/wiki/Telegram)
+<h2 id="telegram-notification">Оповещения в Telegram <img width="40" align="center" src="img/tt.png" alt="exapmle"></h2>
 ![img.png](img/telegram.png)
 
-## [Видео прохождения автотестов](https://selenoid.autotests.cloud/video/93ce3d0fe17922d2d1efc4071cda460d.mp4)
+## [Видео прохождения автотестов](https://selenoid.autotests.cloud/video/93ce3d0fe17922d2d1efc4071cda460d.mp4) ![img_3.png](img/img_3.png)
 <img title="Selenoid" src="img/sc.gif"/>
 
 
