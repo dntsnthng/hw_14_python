@@ -5,30 +5,30 @@ from selene import browser, have
 
 @allure.tag("WEB")
 class MainPage:
-    @allure.title('Открытие страницы')
+
     def open(self):
         browser.open('/')
 
-    @allure.title('Выбор города')
+
     def fill_city(self):
         browser.element('.supernova-navi-item_area-switcher-button').click()
         browser.element('[href="https://saratov.hh.ru/?customDomain=1"]').click()
 
-    @allure.title('Поиск компании')
+
     def search_company(self):
         browser.element('#a11y-search-input').type('Qiwi').press_enter()
         browser.element('[data-qa="bloko-modal-close"]').click()
         browser.element('[data-hh-tab-id="employersList"]').click()
         browser.element('[href="/employer/3125"]').click()
 
-    @allure.title('Поиск резюме')
+
     def fill_resume(self):
         browser.element('#a11y-search-input').type('Специалист Яндекс').press_enter()
         browser.element('[data-qa="bloko-modal-close"]').click()
         browser.element('[data-hh-tab-id="resumeSearch"]').click()
         browser.element('[data-qa="serp-item__title"]').click()
 
-    @allure.title('Поиск работы')
+
     def fill_job(self):
         browser.element('#a11y-search-input').type('Python').press_enter()
         browser.element('[data-qa="bloko-modal-close"]').click()
