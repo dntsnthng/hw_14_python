@@ -14,21 +14,21 @@ class MainPage:
         browser.element('.supernova-navi-item_area-switcher-button').click()
         browser.element('[href="https://saratov.hh.ru/?customDomain=1"]').click()
 
-
+    @allure.step('Выбор компании')
     def search_company(self):
         browser.element('#a11y-search-input').type('Qiwi').press_enter()
         browser.element('[data-qa="bloko-modal-close"]').click()
         browser.element('[data-hh-tab-id="employersList"]').click()
         browser.element('[href="/employer/3125"]').click()
 
-
+    @allure.step('Выбор работы')
     def fill_resume(self):
         browser.element('#a11y-search-input').type('Специалист Яндекс').press_enter()
         browser.element('[data-qa="bloko-modal-close"]').click()
         browser.element('[data-hh-tab-id="resumeSearch"]').click()
         browser.element('[data-qa="serp-item__title"]').click()
 
-
+    @allure.step('Поиск по фильтрам')
     def fill_job(self):
         browser.element('#a11y-search-input').type('Python').press_enter()
         browser.element('[data-qa="bloko-modal-close"]').click()
@@ -37,7 +37,7 @@ class MainPage:
         browser.element('[class=bloko-checkbox__input][value="124"]+span').perform(command.js.scroll_into_view).click()
         browser.element('[name=education][value="not_required_or_not_specified"]+span').click()
 
-
+    @allure.step('Проверка по городу')
     def should_have_city(self):
         browser.element('[data-qa="mainmenu_areaSwitcher"]').should(have.text('Саратов'))
 
@@ -45,10 +45,11 @@ class MainPage:
     def should_have_company(self):
         browser.element('.g-user-content').should(have.text('QIWI'))
 
+    @allure.step('Проверка работы')
     def should_have_job(self):
         pass
 
-
+    @allure.step('Проверка резюме')
     def should_have_resume(self):
         pass
 
