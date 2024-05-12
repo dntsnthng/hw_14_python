@@ -62,22 +62,29 @@ class MainPage:
     def check_city(self):
         self.should_have_city()
 
+    @allure.step('Выбор компании')
     def find_company(self):
         self.open()
         self.search_company()
 
+    @allure.step('Проверка компании')
     def check_company(self):
         self.should_have_company()
 
+    @allure.step('Выбор работы')
     def search_resume(self):
         self.open()
         self.fill_resume()
 
+    @allure.step('Проверка работы')
     def check_resume(self):
         self.should_have_resume()
 
+    @allure.step('Поиск по фильтрам')
     def search_job(self):
         self.open()
         self.fill_job()
+
+    @allure.step('Проверка пофильтрам')
     def check_job(self):
         self.should_have_job()
