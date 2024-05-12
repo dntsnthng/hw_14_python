@@ -4,14 +4,12 @@ from pages.page import MainPage
 
 
 @allure.tag("WEB")
+@allure.title('Открытие страницы')
+
 def test_search_city():
     m = MainPage()
-    with allure.step('Выбор города'):
-        m.select_city()
-
-    with allure.step('Проверка выбора города'):
-        m.check_city()
-
+    m.select_city()
+    m.check_city()
 
 @allure.title('Поиск компании')
 def test_search_company():

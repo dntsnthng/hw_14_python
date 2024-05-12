@@ -5,11 +5,11 @@ from selene import browser, have
 
 @allure.tag("WEB")
 class MainPage:
-
+    @allure.step('Открытие страницы')
     def open(self):
         browser.open('/')
 
-
+    @allure.step('Выбор города')
     def fill_city(self):
         browser.element('.supernova-navi-item_area-switcher-button').click()
         browser.element('[href="https://saratov.hh.ru/?customDomain=1"]').click()
@@ -37,7 +37,7 @@ class MainPage:
         browser.element('[class=bloko-checkbox__input][value="124"]+span').perform(command.js.scroll_into_view).click()
         browser.element('[name=education][value="not_required_or_not_specified"]+span').click()
 
-    @allure.title('Проверка выбора города')
+
     def should_have_city(self):
         browser.element('[data-qa="mainmenu_areaSwitcher"]').should(have.text('Саратов'))
 
@@ -52,10 +52,12 @@ class MainPage:
     def should_have_resume(self):
         pass
 
+    @allure.step('Выбор города')
     def select_city(self):
         self.open()
         self.fill_city()
 
+    @allure.step('Проверка города')
     def check_city(self):
         self.should_have_city()
 
