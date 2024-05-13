@@ -47,6 +47,7 @@ class MainPage:
 
     @allure.step('Проверка работы')
     def should_have_job(self):
+        ""
         pass
 
     @allure.step('Проверка резюме')
