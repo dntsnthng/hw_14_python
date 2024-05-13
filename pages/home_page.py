@@ -47,12 +47,14 @@ class MainPage:
 
     @allure.step('Проверка работы')
     def should_have_job(self):
-        ""
-        pass
+        browser.element('[data-qa="bloko-header-3"]').should(have.text('Python'))
 
     @allure.step('Проверка резюме')
     def should_have_resume(self):
-        pass
+        browser.close_current_tab()
+        browser.switch_to_tab(0)
+        browser.element('[data-qa="resume-block-title-position"]').should(have.text('Специалист'))
+        browser.element('[data-qa="resume-block-experience"]').should(have.text('Яндекс'))
 
     @allure.step('Выбор города')
     def select_city(self):
